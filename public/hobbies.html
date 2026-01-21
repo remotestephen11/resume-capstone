@@ -1,31 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>My Hobbies</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f6f7fb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .notice {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #9a3412;
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
+    }
+
+    h1 { margin-top: 0; }
+
+    ul {
+      margin: 12px 0 0 18px;
+    }
+
+    a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .nav {
+      margin-top: 16px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>My Hobbies</h1>
+  <div class="container">
 
-  <p>
-    Outside of work and study, I enjoy activities that keep me learning, building, and staying balanced.
-  </p>
+    <div class="notice">This is a webpage in HTML only.</div>
 
-  <ul>
-    <li>Learning software development and building small projects</li>
-    <li>Exploring Python and automation concepts</li>
-    <li>Reading about technology, business, and personal development</li>
-    <li>Watching documentaries and educational content</li>
-    <li>Fitness and staying active</li>
-    <li>Listening to music and podcasts</li>
-  </ul>
+    <div class="card">
+      <h1>My Hobbies</h1>
 
-  <hr>
+      <p>
+        Outside of work and study, I enjoy activities that keep me learning, building, and staying balanced.
+      </p>
 
-  <p>
-    <a href="../index.html">Back to Resume</a>
-  </p>
+      <ul>
+        <li>Learning software development and building small projects</li>
+        <li>Exploring Python and automation concepts</li>
+        <li>Reading about technology, business, and personal development</li>
+        <li>Watching documentaries and educational content</li>
+        <li>Fitness and staying active</li>
+        <li>Listening to music and podcasts</li>
+      </ul>
 
+      <hr>
+
+      <div class="nav">
+        <a href="../index.html">Back to Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
