@@ -1,109 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>My Resume</title>
 
   <style>
-    img {
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f6f7fb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .notice {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #9a3412;
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    .header {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      box-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
+    }
+
+    .header img {
       width: 180px;
       height: auto;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    .title p {
+      margin: 6px 0 0;
+      color: #374151;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 22px 0;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 18px rgba(17, 24, 39, 0.04);
+    }
+
+    .card h2, .card h3 {
+      margin-top: 0;
+    }
+
+    ul, ol {
+      margin: 10px 0 0 18px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
       display: block;
-      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+
+    .links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 18px;
+      padding: 14px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      text-align: center;
+      color: #374151;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .projects {
+        grid-template-columns: 1fr;
+      }
+      .project img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>Ejiro Ojada</h1>
-  <p><strong>Full-Stack Developer (Python-focused)</strong></p>
-  <p>Lagos, Nigeria</p>
+  <div class="container">
 
-  <!-- Profile Photo -->
-  <img 
-    src="assets/images/Ejiro Profile Image.png" 
-    alt="Profile photo of Ejiro Ojada"
-  />
+    <div class="notice">This is a webpage in HTML only.</div>
 
-  <hr>
+    <div class="header">
+      <img src="assets/images/Ejiro Profile Image.png" alt="Profile photo of Ejiro Ojada" />
+      <div class="title">
+        <h1>Ejiro Ojada</h1>
+        <p><strong>Full-Stack Developer (Python-focused)</strong></p>
+        <p>Lagos, Nigeria</p>
+      </div>
+    </div>
 
-  <h2>Objective</h2>
-  <p>
-    Career-transitioning professional moving into full-stack web development, with a strong engineering
-    foundation and extensive experience working in structured, high-standards operational environments.
-    Seeking an entry-level to junior full-stack developer role where I can build reliable web applications,
-    strengthen my Python back-end skills, and contribute through strong problem-solving, documentation
-    discipline, and stakeholder communication.
-  </p>
+    <hr>
 
-  <h2>Education</h2>
-  <ul>
-    <li>
-      <strong>Master of Science (MSc), Mechanical Engineering</strong><br>
-      University of South Florida, Tampa, Florida — 2009
-    </li>
-    <li>
-      <strong>Bachelor of Science (BSc), Mechanical Engineering</strong><br>
-      University of South Florida, Tampa, Florida — 2005
-    </li>
-  </ul>
+    <div class="card">
+      <h2>Objective</h2>
+      <p>
+        Career-transitioning professional moving into full-stack web development, with a strong engineering
+        foundation and extensive experience working in structured, high-standards operational environments.
+        Seeking an entry-level to junior full-stack developer role where I can build reliable web applications,
+        strengthen my Python back-end skills, and contribute through strong problem-solving, documentation
+        discipline, and stakeholder communication.
+      </p>
+    </div>
 
-  <h2>Work Experience</h2>
+    <div class="card">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Master of Science (MSc), Mechanical Engineering</strong> — University of South Florida, Tampa, Florida (2009)</li>
+        <li><strong>Bachelor of Science (BSc), Mechanical Engineering</strong> — University of South Florida, Tampa, Florida (2005)</li>
+      </ul>
+    </div>
 
-  <h3>HSE Manager — GEIL</h3>
-  <p><em>2022 – Present</em></p>
-  <ul>
-    <li>Lead HSE planning and coordination across operations and contractor activities.</li>
-    <li>Implement and monitor risk control measures through inspections, audits, and compliance reviews.</li>
-    <li>Support incident investigations and ensure corrective actions are tracked and closed.</li>
-    <li>Engage stakeholders to maintain high safety and operational standards.</li>
-  </ul>
+    <div class="card">
+      <h2>Work Experience</h2>
 
-  <h3>Earlier Professional Experience (Summary)</h3>
-  <ul>
-    <li>Progressive HSE roles in the oil and gas industry since 2010.</li>
-    <li>Banking experience including customer service and supervisory roles.</li>
-    <li>Retail and supermarket operations with strong customer-facing responsibilities.</li>
-  </ul>
+      <h3>HSE Manager — GEIL</h3>
+      <p><em>2022 – Present</em></p>
+      <ul>
+        <li>Lead HSE planning and coordination across operations and contractor activities.</li>
+        <li>Implement and monitor risk control measures through inspections, audits, and compliance reviews.</li>
+        <li>Support incident investigations and ensure corrective actions are tracked and closed.</li>
+        <li>Engage stakeholders to maintain high safety and operational standards.</li>
+      </ul>
 
-  <h2>Skills</h2>
+      <h3 style="margin-top: 16px;">Earlier Professional Experience (Summary)</h3>
+      <ul>
+        <li>Progressive HSE roles in the oil and gas industry since 2010.</li>
+        <li>Banking experience including customer service and supervisory roles.</li>
+        <li>Retail and supermarket operations with strong customer-facing responsibilities.</li>
+      </ul>
+    </div>
 
-  <h3>Technical Skills</h3>
-  <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-    <li>Python (in progress)</li>
-  </ul>
+    <div class="card">
+      <h2>Skills</h2>
 
-  <h3>Professional Skills</h3>
-  <ul>
-    <li>Leadership and team coordination</li>
-    <li>Clear communication and stakeholder engagement</li>
-    <li>Mentorship and coaching</li>
-    <li>Planning, documentation, and process discipline</li>
-    <li>Emotional intelligence and collaborative problem-solving</li>
-  </ul>
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python (in progress)</li>
+      </ul>
 
-  <h2>Awards, Certifications & Achievements</h2>
-  <ul>
-    <li>Professional safety and operational certifications</li>
-    <li>Project and organizational certifications</li>
-    <li>International engineering-related certifications</li>
-  </ul>
+      <h3 style="margin-top: 16px;">Professional Skills</h3>
+      <ul>
+        <li>Leadership and team coordination</li>
+        <li>Clear communication and stakeholder engagement</li>
+        <li>Mentorship and coaching</li>
+        <li>Planning, documentation, and process discipline</li>
+        <li>Emotional intelligence and collaborative problem-solving</li>
+      </ul>
+    </div>
 
-  <hr>
+    <div class="card">
+      <h2>Awards, Certifications & Achievements</h2>
+      <ul>
+        <li>Professional safety and operational certifications</li>
+        <li>Project and organizational certifications</li>
+        <li>International engineering-related certifications</li>
+      </ul>
+    </div>
 
-  <h2>More</h2>
-  <ul>
-    <li><a href="public/hobbies.html">Hobbies</a></li>
-    <li><a href="public/contact.html">Contact</a></li>
-  </ul>
+    <div class="card">
+      <h2>Projects</h2>
 
-  <footer>
-    <p>Ejiro Ojada</p>
-    <p>© 2026 Ejiro Ojada. All rights reserved.</p>
-  </footer>
+      <div class="projects">
+        <div class="project">
+          <h3>Movie Ranking Project</h3>
+          <a href="public/movie-ranking.html">
+            <img src="assets/images/Movie Image.png" alt="Movie Ranking project preview">
+          </a>
+        </div>
 
+        <div class="project">
+          <h3>Birthday Invite Project</h3>
+          <a href="public/birthday-invite.html">
+            <img src="assets/images/Birthday Image.png" alt="Birthday invite project preview">
+          </a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="links">
+        <a href="public/hobbies.html">About My Hobbies</a>
+        <a href="public/contact.html">Contact Me</a>
+      </div>
+    </div>
+
+    <footer>
+      <p><strong>Ejiro Ojada</strong></p>
+      <p>© 2026 Ejiro Ojada. All rights reserved.</p>
+    </footer>
+
+  </div>
 </body>
 </html>
